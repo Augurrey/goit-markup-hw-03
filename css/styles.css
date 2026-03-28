@@ -44,6 +44,7 @@ a {
 .header-container {
   display: flex;
   padding-block: 28px;
+  border-bottom: 1px solid #e7e9fc;
 }
 
 .header-logo {
@@ -132,7 +133,6 @@ address {
   text-align: center;
   color: #ffffff;
   max-width: 496px;
-  /* margin-bottom: 48px; */
   margin: 0 auto 48px;
 }
 
