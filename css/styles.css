@@ -5,13 +5,45 @@ body {
   letter-spacing: 0.02em;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
 ul {
   list-style: none;
+  padding-left: 0;
+  margin-block: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.container {
+  max-width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+/*-------------- Header -------------*/
+
+.header-container {
+  display: flex;
+  padding-block: 28px;
 }
 
 .header-logo {
@@ -22,10 +54,20 @@ a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #2e2f42;
+  margin-right: 76px;
 }
 
 .iris-logo {
   color: #4d5ae5;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header-list {
+  display: flex;
+  gap: 40px;
 }
 
 .header-link {
@@ -41,8 +83,19 @@ a {
   color: #404bbf;
 }
 
-.address {
+.header-address {
   font-style: normal;
+}
+
+address {
+  font-style: normal;
+  margin-left: auto;
+}
+
+.address-list {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
 }
 
 .address-link {
@@ -58,8 +111,17 @@ a {
   color: #404bbf;
 }
 
+/*-------------- Hero -------------*/
+
 .hero {
   background-color: #2e2f42;
+  padding-block: 188px;
+}
+
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-title {
@@ -69,6 +131,9 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #ffffff;
+  max-width: 496px;
+  /* margin-bottom: 48px; */
+  margin: 0 auto 48px;
 }
 
 .hero-button {
@@ -78,12 +143,39 @@ a {
   letter-spacing: 0.04em;
   color: #ffffff;
   background-color: #4d5ae5;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  border-radius: 4px;
+  padding: 16px 32px;
+  min-width: 169px;
+  border: none;
 }
 
 .hero-button:hover,
 .hero-button:focus {
   background-color: #404bbf;
+}
+
+/*-------------- Features -------------*/
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  padding-block: 120px;
 }
 
 .features-title {
@@ -92,6 +184,10 @@ a {
   line-height: 1.11111;
   letter-spacing: 0.02em;
   color: #2e2f42;
+}
+
+.features-item {
+  width: calc((100% - 72px) / 4);
 }
 
 .features-subtitle {
@@ -109,8 +205,11 @@ a {
   color: #434455;
 }
 
+/*-------------- Team -------------*/
+
 .team {
   background: #f4f4fd;
+  padding-block: 120px;
 }
 
 .team-title {
@@ -119,11 +218,33 @@ a {
   line-height: 1.11111;
   letter-spacing: 0.02em;
   text-align: center;
+  margin: 0 auto;
   color: #2e2f42;
+}
+
+.team-list {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-top: 72px;
+}
+
+.team-subtitle-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
 }
 
 .team-item {
   background: #ffffff;
+  border-radius: 0 0 4px 4px;
+  padding: 0px 0px 32px;
+  box-shadow:
+    0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .team-subtitle {
@@ -143,6 +264,12 @@ a {
   color: #434455;
 }
 
+/*-------------- Portfolio -------------*/
+
+.portfolio {
+  padding-block: 120px;
+}
+
 .portfolio-title {
   font-weight: 700;
   font-size: 36px;
@@ -152,8 +279,29 @@ a {
   color: #2e2f42;
 }
 
+.portfolio-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+  margin-top: 72px;
+  justify-content: center;
+}
+
 .portfolio-item {
   background: #ffffff;
+  flex-basis: calc((100% - 48px) / 3);
+}
+
+.portfolio-subtitle-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+  padding: 32px 16px;
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
 }
 
 .portfolio-subtitle {
@@ -172,8 +320,11 @@ a {
   color: #434455;
 }
 
+/*-------------- Footer -------------*/
+
 footer {
   background-color: #2e2f42;
+  padding-block: 100px;
 }
 
 .white-logo {
@@ -195,4 +346,6 @@ footer {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  width: 264px;
+  margin-top: 16px;
 }
