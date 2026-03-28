@@ -28,6 +28,7 @@ img {
 }
 
 a {
+  display: block;
   text-decoration: none;
   color: inherit;
 }
@@ -49,6 +50,7 @@ header {
 }
 
 .header-logo {
+  display: block;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -57,6 +59,7 @@ header {
   text-transform: uppercase;
   color: #2e2f42;
   margin-right: 76px;
+  padding-block: 24px;
 }
 
 .iris-logo {
@@ -65,7 +68,6 @@ header {
 
 .header-nav {
   display: flex;
-  padding-block: 24px;
 }
 
 .header-list {
@@ -79,6 +81,7 @@ header {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding-block: 24px;
 }
 
 .header-link:hover,
@@ -89,7 +92,6 @@ header {
 .header-address {
   font-style: normal;
   margin-left: auto;
-  padding-block: 24px;
 }
 
 .address-list {
@@ -104,6 +106,7 @@ header {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  padding-block: 24px;
 }
 
 .address-link:hover,
@@ -237,7 +240,7 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  margin-block: 32px;
+  padding-block: 32px;
 }
 
 .team-item {
